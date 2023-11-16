@@ -9,7 +9,56 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="main.js"></script>
   </head>
+
   <body>
-    <h1>Auth Form</h1>
+    <main>
+      <div class="container">
+        <section class="form__section">
+          <h1 class="form__title">Login Form</h1>
+
+          <form class="form__content">
+            <div>
+              <label for="email" class="form__label">Email:</label>
+              <input
+                class="form__input"
+                autofocus
+                autocomplete="email"
+                required
+                pattern=".+@[a-zA-Z0-9]{0,}\.[a-zA-Z]{0,}"
+                title="Example: alex@mail.com"
+                placeholder="alex@mail.com"
+                type="email"
+                id="email"
+                name="email"
+              />
+            </div>
+
+            <div>
+              <label for="password" class="form__label">Password:</label>
+              <input
+                class="form__input form__input-password"
+                autocomplete="current-password"
+                required
+                pattern="[a-zA-Z0-9!@#$%^&*\-_+.]{0,}"
+                title="No empty password or whitespace!"
+                placeholder="type your Password"
+                type="password"
+                id="password"
+                name="password"
+              />
+              <label for="showPassword" class="form__label-showpassword">
+                <input type="checkbox" name="showPassword" id="showPassword" />
+                Show Password
+              </label>
+            </div>
+
+            <p>
+              <small><a href="#" class="link js-linkForgotPassword">Forgot Password?</a></small>
+            </p>
+            <button type="submit" class="btn btn--primary">Submit</button>
+          </form>
+        </section>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,4 +1,7 @@
-h1 {
-  color: hotpink;
-  font-family: cursive;
-}
+/* base */
+@import url('./styles/reset.css');
+@import url('./styles/custom-props.css');
+@import url('./styles/base.css');
+
+/* components */
+@import url('./styles/components/form.css');

@@ -1,0 +1,174 @@
+/* stylelint-disable selector-class-pattern */
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--font-dark);
+  background: var(--bg-light);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  place-items: center;
+  place-content: center;
+  margin: auto;
+  height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* helper class */
+.visually-hidden:not(:focus, :active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 8px 12px;
+  font-style: italic;
+  background-color: transparent;
+  border: 1px solid var(--bg-light-grey);
+  border-radius: 8px;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+}
+
+input:focus,
+input:active {
+  outline: 3px solid var(--outline-light);
+}
+
+input:user-invalid {
+  outline: 2px solid var(--error);
+}
+
+.link {
+  color: var(--link);
+  text-decoration: underline dashed;
+  text-underline-offset: 0.4rem;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--font-dark);
+  text-decoration: none;
+}
+
+.btn {
+  min-width: 125px;
+  padding: 8px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transform: skew(-5deg);
+  transition: all 250ms;
+  box-shadow: 4px 4px var(--bg-dark);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--bg-grey);
+}
+
+.btn--primary {
+  color: var(--font-light);
+  background: var(--accent-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+
+/* Media Queries / Desktop-first
+=================================================== */
+
+@media (width <= 1199px) {
+  /* desktop (<= 1199) */
+  .container {
+    max-width: 1090px;
+  }
+}
+
+@media (width <= 1023px) {
+  /* tablet (<= 1023) */
+  .container {
+    max-width: 923px;
+  }
+}
+
+@media (width <= 767px) {
+  /* mobile -> tablet (<= 767) */
+  .container {
+    max-width: 717px;
+  }
+}
+
+@media (width <= 425px) {
+  /* only mobile (<= 425) */
+  .container {
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,13 @@
+:root {
+  --accent-color: dodgerblue;
+  --font-dark: hsl(0deg 0% 25%);
+  --font-light: hsl(0deg 0% 95%);
+  --bg-dark: hsl(0deg 0% 14%);
+  --bg-grey: hsl(0deg 0% 36%);
+  --bg-light-grey: hsl(0deg 0% 82%);
+  --bg-light: white;
+  --link: hsl(210deg 100% 41%);
+  --outline-light: hsl(197deg 71% 73%);
+  --error: red;
+  --success: green;
+}
