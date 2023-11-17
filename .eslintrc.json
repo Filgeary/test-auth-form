@@ -5,8 +5,15 @@
     "node": true,
     "jest/globals": true
   },
-  "plugins": ["jest"],
-  "extends": ["eslint:recommended", "plugin:jest/recommended", "plugin:jest/style", "prettier"],
+  "plugins": ["jest", "jest-dom", "testing-library"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/dom",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
