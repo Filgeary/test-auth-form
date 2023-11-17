@@ -1,5 +1,7 @@
 // @ts-check
 
+import { getFormElements } from '../utils'
+
 /**
  * @param {Element|null} parentCont
  * @param {(data) => Promise} handleSubmit
@@ -7,34 +9,15 @@
 export const initForm = (parentCont, handleSubmit) => {
   const container = parentCont ?? document
 
-  const formSection = container.querySelector('.form__section')
-  if (!formSection) throw new Error('Form Section does not exist!')
-
-  const form = formSection.querySelector('form')
-  if (!form) throw new Error('Form does not exist!')
-
-  const linkForgotPassword = form.querySelector('.js-linkForgotPassword')
-  if (!linkForgotPassword) throw new Error('linkForgotPassword does not exist!')
-
-  const inputEmail = form.querySelector('#email')
-  if (!(inputEmail instanceof HTMLInputElement)) {
-    throw new Error('InputEmail is not Input!')
-  }
-
-  const inputPassword = form.querySelector('#password')
-  if (!(inputPassword instanceof HTMLInputElement)) {
-    throw new Error('InputPassword is not Input!')
-  }
-
-  const inputShowPassword = form.querySelector('#showPassword')
-  if (!(inputShowPassword instanceof HTMLInputElement)) {
-    throw new Error('InputShowPassword is not Input!')
-  }
-
-  const buttonSubmit = form.querySelector('button[type="submit"]')
-  if (!(buttonSubmit instanceof HTMLButtonElement)) {
-    throw new Error('Button Submit is not Button!')
-  }
+  const {
+    linkForgotPassword,
+    inputShowPassword,
+    inputPassword,
+    form,
+    buttonSubmit,
+    formSection,
+    inputEmail,
+  } = getFormElements(container)
 
   linkForgotPassword.addEventListener('click', evt => {
     evt.preventDefault()
