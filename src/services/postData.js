@@ -4,6 +4,6 @@ export const postData = data => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(data)
-    }, 1000)
+    }, 500)
   })
 }
