@@ -81,8 +81,8 @@ input {
 }
 
 input[type='checkbox'] {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 input:focus,
@@ -115,7 +115,7 @@ input:user-invalid {
   vertical-align: middle;
   transform: skew(-5deg);
   transition: all 250ms;
-  box-shadow: 4px 4px var(--bg-dark);
+  box-shadow: 4px 4px var(--accent-secondary-color);
 }
 
 .btn:hover,

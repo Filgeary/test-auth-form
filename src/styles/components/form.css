@@ -2,7 +2,7 @@
 
 .form__section {
   display: grid;
-  gap: 24px;
+  gap: 32px;
   max-width: 400px;
   margin: auto;
   padding: 20px 24px;
@@ -32,10 +32,15 @@
   gap: 4px;
   align-items: center;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .form__input-password {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.form__text-show-password {
+  line-height: normal;
 }
 
 .form__message--success {
