@@ -2,6 +2,10 @@
 
 > тестовое/учебное задание
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4059e423-5f1a-4b2a-8300-504c5acc8ad0/deploy-status)](https://app.netlify.com/sites/filgeary-test-auth-form/deploys)
+
+[Preview Website link](https://filgeary-test-auth-form.netlify.app/)
+
 Auth Form на чистом JS
 
 - Умею в React, но решил сделать на чистом JS
